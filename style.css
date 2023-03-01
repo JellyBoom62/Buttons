@@ -2,6 +2,7 @@ body {
   font-family: "Courier New", Courier, monospace;
   background-color: var(--gray);
   color: var(--dark);
+  user-select: none;
 }
 :root {
   --dark: #282936;
