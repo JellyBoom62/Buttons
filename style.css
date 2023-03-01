@@ -356,11 +356,11 @@ body {
   white-space: nowrap;
   transition: 0.5s;
 }
-.btn-download:hover .hidden-1 {
+.btn-download-wrapper:hover .hidden-1 {
   left: 0;
   transform: translate(0, -50%);
 }
-.btn-download:hover .hidden-2 {
+.btn-download-wrapper:hover .hidden-2 {
   opacity: 1;
   right: 0;
   transform: translate(0, -50%);
@@ -445,3 +445,61 @@ body {
   }
 }
 /* ========================= */
+.btn-getstarted-wrapper {
+  --wrapper-p: 4px;
+  --arrow-p1: 12px;
+  --arrow-p2: 10px;
+  --arrow-w: 8px;
+  --arrow-h: 1px;
+  --gap: 6px;
+  background-color: #a370f0;
+  border-radius: 8px;
+  color: var(--white);
+  cursor: pointer;
+}
+.btn-getstarted {
+  position: relative;
+  height: calc(var(--arrow-h) + 2 * var(--arrow-p1) + 2 * var(--wrapper-p));
+  width: max-content;
+  display: flex;
+  align-items: center;
+  padding: var(--wrapper-p);
+}
+.btn-getstarted span {
+  padding-left: 10px;
+  padding-right: calc(var(--arrow-w) + 2 * var(--arrow-p1) + var(--gap));
+}
+.btn-getstarted-arrow-wrapper {
+  position: absolute;
+  right: var(--wrapper-p);
+  left: calc(100% - var(--wrapper-p) - var(--arrow-w) - var(--arrow-p1) - var(--arrow-p2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--arrow-p1) var(--arrow-p2);
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0px 0px 16px -6px #000;
+  transition: 0.4s;
+}
+.btn-getstarted-arrow {
+  position: relative;
+  width: var(--arrow-w);
+  height: var(--arrow-h);
+  background-color: #a370f0;
+}
+.btn-getstarted-arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  transform: translateY(-50%) rotate(45deg);
+  border-top: 1px solid #a370f0;
+  border-right: 1px solid #a370f0;
+}
+.btn-getstarted-wrapper:hover .btn-getstarted-arrow-wrapper {
+  left: var(--wrapper-p);
+}
+/* ============================== */
