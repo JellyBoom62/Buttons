@@ -2,6 +2,11 @@ body {
   font-family: "Courier New", Courier, monospace;
   background-color: var(--gray);
   color: var(--dark);
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none;
   user-select: none;
 }
 :root {
